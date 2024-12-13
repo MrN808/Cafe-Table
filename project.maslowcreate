@@ -8,15 +8,122 @@
     "topLevel": true,
     "allAtoms": [
         {
+            "atomType": "Molecule",
+            "name": "Cylinder",
+            "x": 0.41354166666666664,
+            "y": 0.5350553505535055,
+            "uniqueID": 789127,
+            "ioValues": [],
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Circle",
+                    "name": "Circle",
+                    "x": 0.41041666666666665,
+                    "y": 0.47232472324723246,
+                    "uniqueID": 665032,
+                    "ioValues": [
+                        {
+                            "name": "diameter",
+                            "ioValue": 100
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.5052083333333333,
+                    "y": 0.44649446494464945,
+                    "uniqueID": 225300,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/221504/789127/665032Circle"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 30
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Color",
+                    "name": "Color",
+                    "x": 0.6046875,
+                    "y": 0.4575645756457564,
+                    "uniqueID": 527181,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/221504/789127/225300Extrude"
+                        }
+                    ],
+                    "selectedColorIndex": "5"
+                },
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.9911458333333334,
+                    "y": 0.48708487084870844,
+                    "uniqueID": 168102,
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "source/221504/789127/527181Color"
+                        }
+                    ]
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 665032,
+                    "ap2ID": 225300
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 225300,
+                    "ap2ID": 527181
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 527181,
+                    "ap2ID": 168102
+                }
+            ],
+            "fileTypeVersion": 1,
+            "simplify": false,
+            "unitsIndex": 0
+        },
+        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9895833333333333,
             "y": 0.5,
             "uniqueID": 376504,
-            "ioValues": []
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "source/221504/789127Molecule"
+                }
+            ]
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 789127,
+            "ap2ID": 376504
+        }
+    ],
     "fileTypeVersion": 1,
     "simplify": false,
     "unitsIndex": 0,
